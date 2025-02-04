@@ -1,0 +1,34 @@
+page under folder ---> URLS
+routing: static + dyncamic
+layout to appear on each page amd can be enabled for specific pages (for naigation, header, footer...)
+
+** Route groups ideal to seperate layouts too without affecting the URL / not being mapped to routes (e.g.: '(folder-route-grp)' as folder name ---> users folder + layout.tsx) BUT don't have more than `page.tsx` under sperate route groups as it's one of the entry point 
+
+Error handling (must be Client component):
+- create an `error.tsx` file
+- gloabl error handler? ---> under the app create a `global-error.tsx`
+** Next looks for the closest error file to `page.tsx` of the app to display
+
+
+Loading UIs: create file named `loading.tsx`
+
+Parallel routes??
+
+Data fecthing:
+On server side
+HmrCache
+Parallel requests on server side
+How & when you render content on server side??
+- SSG: static site generation, HTML generated at the built time. content is created when you deploy, not when requested.
+- ISR: Incrementatl static regeneration (extends SSG): combines static generation + ability to refresh and update content. you can use that with time revalidate for the entire page. revalidate the request. On demand revalidation.
+
+- SSR: server side rendering: content created for each request ideal for hugly dyncmic content and pages need real time data
+- PPR: partial Prerendering. not a page level.
+
+API Routes:
+file named `route.ts/js`, `api` folder? server code, async + await
+Similar slightly to routing
+
+Search Engine Optimsation (SEO), meta data. Content we ensure it's sherable.
+defined in layout metadata.
+Meta data can be genrated dynamically for individual pages...
